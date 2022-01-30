@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+</head>
+<body>
+<div class="w3-container">
+<img src="image/banner.png" style="height: 200px; width: 100%">
+</div>
+<div class="w3-bar w3-black">
+ <button class="w3-bar-item w3-button" onclick="openMenu('Acer')">Acer</button>
+ <button class="w3-bar-item w3-button" onclick="openMenu('Lenovo')">Lenovo</button>
+ <button class="w3-bar-item w3-button" onclick="openMenu('Asus')">Asus</button>
+ <button class="w3-bar-item w3-button" onclick="openMenu('hp')">hp</button>
+</div>
+<div id="Acer" class="w3-container menu" style="display:none">
+ <h2>Acer</h2>
+ <img class="w3-animate-fading" src="image/acer.jpg" style="height: 420px; width: 50%">
+</div>
+<div id="Lenovo" class="w3-container menu" style="display:none">
+ <h2>Lenovo</h2>
+ <img class="w3-animate-bottom" src="image/lenovo.jpeg" style="width: 50%">
+</div>
+<div id="Asus" class="w3-container menu" style="display:none">
+ <h2>Asus</h2>
+ <img class="w3-animate-top" src="image/asus.jpg" style="width: 46%">
+</div>
+<div id="hp" class="w3-container menu" style="display:none">
+ <h2>hp</h2>
+ <img class="w3-animate-zoom" src="image/hp.jpeg" style="width: 46%">
+</div>
+<script>
+function openMenu(namaMenu) {
+ var i;
+ var x = document.getElementsByClassName("menu");
+ for (i = 0; i < x.length; i++) {
+ x[i].style.display = "none";
+ }
+ document.getElementById(namaMenu).style.display = "block";
+}
+</script>
+</body>
+</html>
